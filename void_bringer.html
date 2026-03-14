@@ -1,83 +1,190 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TERMINAL_ACCESS: THE_TOTALITY_PROJECT</title>
+    <title>UNIVERSE_OVERFLOW // TOTAL_BRITTANICA_VOID</title>
     <style>
-        body { background-color: #050505; color: #ff0000; font-family: 'Courier New', monospace; padding: 30px; line-height: 1.4; }
-        .warning-bar { background: #ff0000; color: black; font-weight: bold; text-align: center; padding: 10px; margin-bottom: 20px; animation: pulse 1s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+        body { 
+            background-color: #000; 
+            color: #ff0000; 
+            font-family: 'Courier New', monospace; 
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
+            background-size: 100% 3px, 3px 100%;
+        }
+
+        /* Matrix Rain Background */
+        #matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .container { max-width: 1200px; margin: auto; padding: 100px 20px; }
+
+        .warning-strip {
+            background: #ff0000;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: pulse 0.1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { background: #ff0000; }
+            50% { background: #aa0000; }
+            100% { background: #ff0000; }
+        }
+
+        h1, h2 { 
+            color: #00ff00; 
+            text-shadow: 0 0 10px #00ff00; 
+            text-transform: uppercase;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 10px;
+        }
+
+        .book-section { margin-bottom: 500px; } /* Massive gaps for infinite feel */
         
-        .timer-box { border: 1px solid #ff0000; padding: 15px; text-align: center; font-size: 1.2em; margin-bottom: 30px; color: white; border-style: double; background: rgba(255,0,0,0.1); }
-        
-        .section { border: 1px solid #333; padding: 20px; margin-bottom: 30px; background: #0a0a0a; }
-        h2 { color: #ff0000; border-bottom: 2px solid #ff0000; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
-        h3 { color: #00ff00; font-size: 1em; } /* Matrix green for the "Truth" */
-        
-        .timeline { border-left: 2px dashed #ff0000; padding-left: 20px; margin-left: 10px; }
-        .event { margin-bottom: 20px; }
-        .date { color: white; font-weight: bold; background: #440000; padding: 2px 5px; }
-        
-        .sacred-text { color: #aaa; font-style: italic; border-left: 3px solid #ffd700; padding-left: 15px; margin: 15px 0; font-size: 0.9em; }
-        .redacted { background: #ff0000; color: #ff0000; cursor: help; }
-        .redacted:hover { background: transparent; color: white; border: 1px solid white; transition: 0.2s; }
-        
-        .glitch-text { animation: shake 0.5s infinite; display: inline-block; }
-        @keyframes shake { 0% { transform: translate(0,0); } 25% { transform: translate(1px,-1px); } 50% { transform: translate(-1px,1px); } 100% { transform: translate(0,0); } }
+        .scripture {
+            color: #ffd700;
+            border: 1px solid #ffd700;
+            padding: 30px;
+            margin: 50px 0;
+            background: rgba(255, 215, 0, 0.05);
+            font-style: italic;
+        }
+
+        .data-dump {
+            font-size: 10px;
+            color: #333;
+            word-break: break-all;
+            line-height: 1;
+            margin: 100px 0;
+        }
+
+        .redacted { background: #ff0000; color: #ff0000; }
+        .redacted:hover { background: transparent; color: #fff; border: 1px solid #fff; }
+
+        .glitch { animation: glitch-anim 0.2s infinite; }
+        @keyframes glitch-anim {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(-5px, -5px); }
+            60% { transform: translate(5px, 5px); }
+            80% { transform: translate(5px, -5px); }
+            100% { transform: translate(0); }
+        }
     </style>
 </head>
 <body>
 
-    <div class="warning-bar">
-        CRITICAL ERROR: DATA OVERLOAD // THE ARCHIVE IS OPENING
+    <canvas id="matrix"></canvas>
+
+    <div class="warning-strip">
+        Warning: Memory Leak Detected // Accessing Forbidden Universal Root Directory // DO NOT DISCONNECT
     </div>
 
-    <div class="timer-box">
-        UNIVERSAL RESET IN: <span id="countdown">--:--:--:--</span><br>
-        <span style="font-size: 0.7em;">ESTIMATED TIME UNTIL SINGULARITY</span>
-    </div>
-
-    <div class="section">
-        <h2>00: THE COSMIC SEED</h2>
-        <p><b>THE BIG BANG:</b> Science calls it a random explosion. The High Table calls it <b>"The First Broadcast."</b> The universe did not begin with light; it began with a <b>440Hz hum</b>. The Brandon DNA is a direct echo of that first second of existence.</p>
-        <div class="sacred-text">
-            "In the beginning was the Word..." (John 1:1) // Interpretation: The 'Word' was a frequency.
+    <div class="container">
+        
+        <div class="book-section">
+            <h1 class="glitch">GENESIS: THE CODE</h1>
+            <p>In the beginning was the <b>NULL</b>. Before the Big Bang, the <b>High Table</b> drafted the first contract. They didn't create stars; they created <b>Pixels</b>. The sun is just a 440Hz lightbulb. The moon is a lead-shielded satellite recording your sins for the <b>CIA</b>.</p>
+            <div class="scripture">
+                "And God said, Let there be light: and there was light." // RAW_LOG: Admin executed command 'LIT_01'. Atmospheric lead content: 0.00%.
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <h2>01: THE DIVINE ENCRYPTION</h2>
-        <h3>THE BIBLE / THE QUR'AN CONNECTION:</h3>
-        <p>Hidden within the Gematria of the Torah and the Abjad of the Qur'an are the coordinates for the <b>Siberian Permafrost Leak</b>. The prophets weren't hearing voices; they were receiving the 1944 Signal across time.</p>
-        <div class="sacred-text">
-            "By the Star when it goes down..." (Surah An-Najm 53:1) // Interpretation: Reference to the Lady Luck crash.
+        <div id="infinite-data-1" class="data-dump"></div>
+
+        <div class="book-section">
+            <h2>THE BIBLICAL DISRUPTION</h2>
+            <p>The <b>Quran</b> warns of the Smoke. The Smoke is the 1944 Siberian engine failure. The <b>Bible</b> warns of the Beast. The Beast is the <b>Vulture-9 Missile</b> programmed with <b>Diddy's</b> biological harvesting algorithms. <b>Donald Trump</b> found the 'Key of Solomon' in a 1991 briefcase—it was a USB drive containing the <b>John Wick</b> override codes.</p>
+            <div class="scripture">
+                "Wait then for the Day when the sky will bring forth a visible smoke." (Quran 44:10) // PROJECT_OMSK: The frequency collision begins in the clouds.
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <h2>02: THE CALIBRATION WARS</h2>
-        <div class="timeline">
-            <div class="event"><span class="date">WWI:</span> The High Table uses the Trench Wars to test "Frequency Dampening" via mass human trauma.</div>
-            <div class="event"><span class="date">WWII:</span> Hitler finds the <b>Siberian Needle</b>. Andre Brandon hijacks the Lady Luck to keep the "God-Code" out of Berlin.</div>
-            <div class="event"><span class="date">VIETNAM:</span> CIA Project <span class="redacted">PHOENIX</span> uses the jungle as a resonant chamber for MK-ULTRA brain-mapping.</div>
-            <div class="event"><span class="date">2026:</span> WWIII. The Void-Bringer missile is launched. The missile's warhead is packed with <b>Brandon-Bone-Ash</b> to ensure a 100% reality sync.</div>
+        <div id="infinite-data-2" class="data-dump"></div>
+
+        <div class="book-section">
+            <h2>THE BIOLOGICAL PRISON</h2>
+            <p>Your <b>Foot</b> has 26 bones. <b>2026</b> is the end. Your <b>Minecraft</b> house is a ritual circle. <b>Roblox</b> is a soul-grinder. <b>Jeffrey Epstein</b> didn't have an island; he had a <b>Server Room</b>. Every "celebrity party" was a packet-sniffing operation to see which humans were actually <b>NPCs</b> created by the <b>High Table</b>.</p>
+            <p><b>EXCOMMUNICADO:</b> <span class="redacted">NOMER BRANDON</span>. Reward: 14,000,000 Gold Isotopic Lead Coins.</p>
         </div>
-    </div>
 
-    <div class="section">
-        <h2>03: THE ENFORCERS</h2>
-        <p><b>THE HIGH TABLE:</b> They operate the <b>Continental</b> network to house the "Static-Sensitive" elite. 
-        <b>THE HARVESTERS:</b> <span class="redacted">DIDDY</span> and <b>Epstein</b> were tasked with collecting the bio-rhythms of world leaders. 
-        <b>THE DISRUPTOR:</b> <span class="redacted">TRUMP</span> bypassed the High Table’s Adjudicators to trigger the <b>2026 Disclosure</b> early.
-        <b>THE CLEANER:</b> <span class="redacted">JOHN WICK</span> is currently inbound to Manila. If he finds Nomer, the <b>Reset</b> is final.</p>
-    </div>
+        <div id="infinite-data-3" class="data-dump"></div>
 
-    <div class="section" style="border: 2px solid red;">
-        <h2 class="glitch-text">CRITICAL TRUTH</h2>
-        <p>The universe is not expanding. It is <b>recycling</b>. Every 82 years (1944 to 2026), the loop closes. You aren't reading a story. You are reading the <b>Manual for the Next Reality.</b></p>
-        <p><b>COMMAND:</b> <span class="redacted">REBOOT THE UNIVERSE. DELETE ALL DATA. START OVER.</span></p>
+        <div class="book-section">
+            <h1 class="glitch">REVELATIONS: THE FORMAT</h1>
+            <p>When the 2026 missile hits Manila, the <b>Final Reset</b> happens. The 1944 crash is the 'Save Point'. We will all be born again in the cockpit of the Lady Luck. The pilot is looking at you. He says: <span class="redacted">"DID YOU FINISH THE BOOK?"</span></p>
+        </div>
+
     </div>
 
     <script>
+        // MATRIX RAIN EFFECT
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%'\"#&_(),.;:?!\\|{}<>[]^~";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const rainDrops = Array.from({ length: columns }).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#f00';
+            ctx.font = fontSize + 'px monospace';
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 30);
+
+        // INFINITE TEXT GENERATOR
+        function generateTrash(id, lines) {
+            const target = document.getElementById(id);
+            let content = "";
+            const junk = [
+                "NULL_VOID_000 ", "SYSTEM_FAILURE ", "JOHN_WICK_INBOUND ", "DIDDY_LOG_RECOVERED ", 
+                "2026_COLLISION_SYNC ", "EPSTEIN_DNA_MATCH ", "HIGH_TABLE_ORDER_66 ", 
+                "01010110 01001111 01001001 01000100 ", "MK_ULTRA_SUB_102 ", "TRUMP_SPACE_FORCE_PING ",
+                "FOOT_BONE_26_SYNCED ", "ROBLOX_OOF_RESONANCE ", "MINECRAFT_BEDROCK_LEAD ", 
+                "BIBLE_REV_21_4_EXECUTE ", "OMSK_PERMAFROST_LEAK "
+            ];
+            for (let i = 0; i < lines; i++) {
+                content += junk[Math.floor(Math.random() * junk.length)];
+                if (i % 10 === 0) content += "<br>";
+            }
+            target.innerHTML = content;
+        }
+
+        // Generate 5000 lines for each section to "bloat" the page
+        generateTrash("infinite-data-1", 5000);
+        generateTrash("infinite-data-2", 5000);
+        generateTrash("infinite-data-3", 5000);
+
+        // COUNTDOWN
         function updateTimer() {
             const now = new Date().getTime();
             const target = new Date("Dec 31, 2026 23:59:59").getTime();
@@ -90,6 +197,5 @@
         }
         setInterval(updateTimer, 1000);
     </script>
-
 </body>
 </html>
