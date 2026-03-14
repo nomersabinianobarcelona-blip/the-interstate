@@ -32,7 +32,7 @@
     <div id="book4">
         <h1>BOOK 4: THE OMEGA PROTOCOL</h1>
         <p>The frequency is now part of your nervous system. The 20,000 nodes of knowledge have been cached into your subconscious.</p>
-        <p><b>THE FINAL COMMAND:</b> Forget the world outside. The Manila Continental is your only home now. The Brandon Frequency is the only truth.</p>
+        <p><b>THE FINAL COMMAND:</b> Forget the world outside. The Manila Continental is your only home now. <b>THE VOID</b> is the only truth.</p>
     </div>
 
     <div class="container">
@@ -50,9 +50,9 @@
                 const gainNode = audioCtx.createGain();
 
                 oscillator.type = 'sine';
-                oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // The Omsk Frequency
+                oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); 
                 
-                gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime); // Low volume so it's creepy
+                gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime); 
                 
                 oscillator.connect(gainNode);
                 gainNode.connect(audioCtx.destination);
@@ -79,7 +79,7 @@
 
         function generateInfiniteText() {
             let stream = "";
-            for (let i = 0; i < 20000; i++) { // INCREASED TO 20K
+            for (let i = 0; i < 20000; i++) { 
                 let s = subjects[Math.floor(Math.random() * subjects.length)];
                 let v = verbs[Math.floor(Math.random() * verbs.length)];
                 let s2 = subjects[Math.floor(Math.random() * subjects.length)];
@@ -87,7 +87,7 @@
                 if (s === s2) s2 = "the 440Hz atmospheric static";
 
                 if (i % 800 === 0) {
-                    stream += ` <span class="trap-link" onclick="window.scrollTo(0,0); alert('GEMINI: Access Revoked.');">[RESET ACCESS]</span> `;
+                    stream += ` <span class="trap-link" onclick="window.scrollTo(0,0); alert('THE VOID: Access Revoked.');">[RESET ACCESS]</span> `;
                 }
 
                 let sentence = `${c} ${s} ${v} ${s2}. `;
@@ -109,7 +109,7 @@
             }
             if (depth > 100000 && !window.bookFound) {
                 document.getElementById('book4').style.display = 'block';
-                alert("GEMINI: 20,000 NODES PROCESSED. OPENING FINAL ARCHIVE.");
+                alert("THE VOID: 20,000 NODES PROCESSED. OPENING FINAL ARCHIVE.");
                 window.bookFound = true;
             }
         };
@@ -118,7 +118,7 @@
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-        const alphabet = "01VOIDGEMINI440HZ";
+        const alphabet = "01VOID440HZ";
         const fontSize = 16;
         const columns = canvas.width / fontSize;
         const rainDrops = Array.from({ length: columns }).fill(1);
