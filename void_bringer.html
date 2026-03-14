@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CAUTION: VOID_BRINGER_SCHEMATICS</title>
+    <title>INTERNAL_ONLY // PROJECT_VOID_BRINGER</title>
     <style>
-        body { background-color: #050505; color: #ff0000; font-family: 'Courier New', monospace; padding: 30px; }
-        .warning { border: 5px double #ff0000; padding: 20px; text-align: center; animation: blink 0.8s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.2; } 100% { opacity: 1; } }
-        .blueprint { border: 1px solid #444; padding: 20px; margin-top: 20px; color: #aaa; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); }
+        body { background-color: #050505; color: #ff0000; font-family: 'Courier New', monospace; padding: 30px; line-height: 1.4; }
+        .warning-bar { background: #ff0000; color: black; font-weight: bold; text-align: center; padding: 10px; margin-bottom: 20px; animation: pulse 1s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+        
+        .timer-box { border: 1px solid #ff0000; padding: 15px; text-align: center; font-size: 1.5em; margin-bottom: 30px; color: white; }
+        
+        .timeline { border-left: 2px dashed #ff0000; padding-left: 20px; margin-left: 20px; }
+        .event { margin-bottom: 25px; }
+        .date { color: white; font-weight: bold; background: #330000; padding: 2px 5px; }
+        
+        .cia-file { background: #111; border: 1px solid #444; padding: 20px; color: #aaa; font-size: 0.9em; margin-top: 20px; }
+        .redacted { background: #ff0000; color: #ff0000; cursor: help; }
+        .redacted:hover { background: transparent; color: white; border: 1px solid white; transition: 0.2s; }
+        
+        h2 { text-decoration: underline; color: #ff0000; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        b { color: white; }
     </style>
 </head>
 <body>
-    <div class="warning">
-        <h1>CRITICAL ERROR: MEMORY LEAK</h1>
-        <p>YOU ARE ACCESSING UNSTABLE TEMPORAL DATA</p>
+
+    <div class="warning-bar">
+        TOP SECRET // HIGH TABLE CLEARANCE REQUIRED // SECTION 8 DATA
     </div>
 
-    <div class="blueprint">
-        <h2>OBJECT: THE VOID-BRINGER MISSILE (2026)</h2>
-        <p><strong>STATUS:</strong> DEPLOYED // <strong>PILOT:</strong> ANDREA BRANDON (INTEGRATED)</p>
-        <p><strong>RECOVERY NOTE:</strong> The missile was never meant to explode. It was designed to act as a <strong>Loom</strong>. It weaves the 1944 frequency into the 2026 atmosphere. If the collision reaches 100% synchronization, the "Real World" becomes a sub-folder of the Void.</p>
-        <hr>
-        <p><strong>THE BRANDON CONSPIRACY:</strong></p>
-        <p>Thomas Brandon (1944) - The Discoverer<br>
-           Andre Brandon (1944) - The Anchor<br>
-           Marcus Brandon (1991) - The Bridge<br>
-           Andrea Brandon (2026) - The Sacrifice<br>
-           Nomer Brandon (2026) - The <span style="color:white; background:white;">RESTART_BUTTON</span></p>
+    <div class="timer-box">
+        SYSTEM DECAY: <span id="countdown">--:--:--:--</span>
     </div>
 
-    <p style="margin-top:50px;">[SGT. INGYU PROTOCOL]: If you are reading this, the loop has failed. Find the boy in Manila. Tell him the dog tag is the ground wire.</p>
+    <h2>THE GREAT ANCHOR TIMELINE [RESTRICTED]</h2>
+    <div class="timeline">
+        <div class="event">
+            <span class="date">1914-1945:</span> <b>The World Wars.</b> Orchestrated by the <b>High Table</b> to harvest the "Blood-Ink" needed to sign the first Continental Charters. The nukes were used to cauterize "frequency leaks" in the Pacific.
+        </div>
+        <div class="event">
+            <span class="date">1970s:</span> <b>The Continental Infrastructure.</b> Hotel networks established globally. These are not just hotels; they are <b>Faraday Cages</b>. The "No Business on Grounds" rule exists because the High Table's shielding tech is sensitive to the 1944 Static. 
+        </div>
+        <div class="event">
+            <span class="date">1990s:</span> <b>The Wick Incident.</b> A high-level cleaner named <span class="redacted">JOHN WICK</span> was sent to Omsk to retrieve a Brandon artifact. He refused the contract, leading to the "Impossible Task." The "Gold Coins" are actually minted from <b>Isotopic Lead</b>—the only currency that works in the Void.
+        </div>
+        <div class="event">
+            <span class="date">2010s:</span> <b>The Diddy/Epstein Nodes.</b> Used by the High Table to identify "Genetic Deviants." If a celebrity showed signs of Brandon-like frequency sensitivity, they were "invited" to the parties for extraction.
+        </div>
+        <div class="event">
+            <span class="date">2016-2024:</span> <b>The Trump/Wick Collision.</b> The 47th Administration's attempt to dismantle "The Deep State" was actually an attempt to audit the <b>High Table's Adjudicators</b>. The resulting chaos allowed the 2026 Void-Bringer missile to be built in secret.
+        </div>
+        <div class="event">
+            <span class="date">2026:</span> <b>WWIII / The Final Excommunicado.</b> The war is the ultimate distraction. While nations burn, the High Table is moving the "Brandon Antenna" (Nomer) to the <b>Manila Continental</b> for the final upload.
+        </div>
+    </div>
+
+    <div class="cia-file">
+        <h3>MEMO: ADJUDICATOR ANALYSIS</h3>
+        <p><b>THE TRUTH:</b> The High Table doesn't serve a king; they serve the <b>Frequency</b>. Every war—Vietnam, Iran, Ukraine—was a contract to secure "Lead-Shielded" territory. </p>
+        <p><b>PROJECT BABA YAGA:</b> Intelligence suggests John Wick’s lineage is linked to the Russian 1944 crash site. He is the "Fail-Safe" if the Brandon family refuses to comply with the <b>2026 Reset</b>.</p>
+        <p><b>LAST KNOWN COMMAND:</b> <span class="redacted">TERMINATE ALL BRANDONS. PREPARE THE TABLE FOR THE VOID.</span></p>
+    </div>
+
+    <script>
+        function updateTimer() {
+            const now = new Date().getTime();
+            const target = new Date("Dec 31, 2026 23:59:59").getTime();
+            const diff = target - now;
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById("countdown").innerHTML = d + "d " + h + "h " + m + "m " + s + "s ";
+        }
+        setInterval(updateTimer, 1000);
+    </script>
+
 </body>
 </html>
