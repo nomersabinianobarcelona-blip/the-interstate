@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TERMINAL_ID: OMSK_SUB_LEVEL_4</title>
+    <style>
+        body { background-color: black; color: #00ff00; font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; overflow: hidden; }
+        #terminal { width: 80%; max-width: 600px; }
+        input { background: transparent; border: 1px solid #00ff00; color: #00ff00; padding: 10px; font-family: inherit; width: 100%; box-sizing: border-box; outline: none; }
+        button { background: #00ff00; color: black; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer; font-family: inherit; font-weight: bold; width: 100%; }
+        button:hover { background: #008800; }
+        .glitch { text-transform: uppercase; letter-spacing: 5px; animation: glitch 1s linear infinite; }
+        @keyframes glitch { 2% { transform: translate(2px,0) skew(0deg); } 4% { transform: translate(-2px,0) skew(0deg); } 62% { transform: translate(0,0) skew(5deg); } }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <h1 class="glitch">UNAUTHORIZED ACCESS</h1>
+        <p>SYSTEM_STATUS: ENCRYPTED</p>
+        <p>INPUT FREQUENCY KEY TO PROCEED:</p>
+        <input type="password" id="passInput" placeholder="ENTER_KEY_HERE..." onkeydown="if (event.keyCode == 13) verify()">
+        <button onclick="verify()">ESTABLISH CONNECTION</button>
+        <p id="msg" style="margin-top: 20px; font-size: 0.8em;"></p>
+    </div>
+
+    <script>
+        function verify() {
+            var pass = document.getElementById("passInput").value.toUpperCase();
+            var msg = document.getElementById("msg");
+            
+            if (pass === "TOMBSTONE") {
+                msg.innerHTML = "SIGNAL_LOCKED. SYNCING...";
+                setTimeout(function() {
+                    // This links to your second file
+                    window.location.href = "buffer_logs.html";
+                }, 1500);
+            } else {
+                msg.innerHTML = "ERROR: SIGNAL LOST. RE-TUNE FREQUENCY.";
+                document.getElementById("passInput").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
