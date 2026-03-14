@@ -1,150 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>UNIVERSE_OVERFLOW // TOTAL_BRITTANICA_VOID</title>
+    <title>SYSTEM_CRITICAL // TOTAL_OVERFLOW</title>
     <style>
-        body { 
-            background-color: #000; 
-            color: #ff0000; 
-            font-family: 'Courier New', monospace; 
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
-                        linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
-            background-size: 100% 3px, 3px 100%;
-        }
-
-        /* Matrix Rain Background */
-        #matrix {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.15;
-        }
-
-        .container { max-width: 1200px; margin: auto; padding: 100px 20px; }
-
-        .warning-strip {
-            background: #ff0000;
-            color: black;
-            font-weight: bold;
-            text-align: center;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            animation: pulse 0.1s infinite;
-        }
-
-        @keyframes pulse {
-            0% { background: #ff0000; }
-            50% { background: #aa0000; }
-            100% { background: #ff0000; }
-        }
-
-        h1, h2 { 
-            color: #00ff00; 
-            text-shadow: 0 0 10px #00ff00; 
-            text-transform: uppercase;
-            border-bottom: 2px solid #00ff00;
-            padding-bottom: 10px;
-        }
-
-        .book-section { margin-bottom: 500px; } /* Massive gaps for infinite feel */
+        body { background-color: #000; color: #ff0000; font-family: 'Courier New', monospace; margin: 0; padding: 0; overflow-x: hidden; }
+        #matrix { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15; }
+        .container { max-width: 1200px; margin: auto; padding: 100px 20px; position: relative; }
         
-        .scripture {
-            color: #ffd700;
-            border: 1px solid #ffd700;
-            padding: 30px;
-            margin: 50px 0;
-            background: rgba(255, 215, 0, 0.05);
-            font-style: italic;
-        }
+        .warning-strip { background: #ff0000; color: black; font-weight: bold; text-align: center; padding: 20px; position: sticky; top: 0; z-index: 100; letter-spacing: 5px; }
+        
+        /* JUMPSCARE OVERLAY */
+        #scare { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 10000; }
 
-        .data-dump {
-            font-size: 10px;
-            color: #333;
-            word-break: break-all;
-            line-height: 1;
-            margin: 100px 0;
-        }
+        .book-section { margin-bottom: 2000px; } 
+        .data-dump { font-size: 10px; color: #1a0000; word-break: break-all; line-height: 1.2; }
+        
+        /* FAKE LINKS */
+        .trap-link { color: #ff0000; text-decoration: underline; cursor: pointer; font-weight: bold; }
+        .trap-link:hover { color: #00ff00; }
 
-        .redacted { background: #ff0000; color: #ff0000; }
-        .redacted:hover { background: transparent; color: #fff; border: 1px solid #fff; }
-
-        .glitch { animation: glitch-anim 0.2s infinite; }
-        @keyframes glitch-anim {
-            0% { transform: translate(0); }
-            20% { transform: translate(-5px, 5px); }
-            40% { transform: translate(-5px, -5px); }
-            60% { transform: translate(5px, 5px); }
-            80% { transform: translate(5px, -5px); }
-            100% { transform: translate(0); }
+        #book4 {
+            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 85%; height: 85%; background: white; color: black; z-index: 1000;
+            padding: 50px; border: 20px solid #ff0000; overflow-y: scroll; box-shadow: 0 0 100px #ff0000;
         }
+        #book4 h1 { border-bottom: 5px solid black; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
+    <div id="scare"></div>
     <canvas id="matrix"></canvas>
+    <div class="warning-strip">SCROLL_DEPTH_MONITOR_ACTIVE // TRAPS_INITIALIZED</div>
 
-    <div class="warning-strip">
-        Warning: Memory Leak Detected // Accessing Forbidden Universal Root Directory // DO NOT DISCONNECT
+    <div id="book4">
+        <h1>BOOK 4: THE OMEGA PROTOCOL</h1>
+        <p><b>DECODED DATA:</b> You survived the traps. You ignored the fake exits. You are now the "Architect" of the Void.</p>
+        <p><b>THE FINAL REVEAL:</b> The Bible, the Quran, the John Wick High Table—they are all layers of a single <b>Operating System</b>. The "Siberian Buffer" was a memory leak from the 1944 version of Earth. Nomer Brandon is the cursor. And YOU? You are the <b>User</b> who just reached the root folder.</p>
+        <p><b>WARNING:</b> John Wick has been dispatched to your local IP address. The Manila Protocol is complete.</p>
+        <hr>
+        <p style="text-align: center;">[END OF ALL DATA]</p>
     </div>
 
     <div class="container">
-        
         <div class="book-section">
-            <h1 class="glitch">GENESIS: THE CODE</h1>
-            <p>In the beginning was the <b>NULL</b>. Before the Big Bang, the <b>High Table</b> drafted the first contract. They didn't create stars; they created <b>Pixels</b>. The sun is just a 440Hz lightbulb. The moon is a lead-shielded satellite recording your sins for the <b>CIA</b>.</p>
-            <div class="scripture">
-                "And God said, Let there be light: and there was light." // RAW_LOG: Admin executed command 'LIT_01'. Atmospheric lead content: 0.00%.
-            </div>
+            <h1>BOOK 3: THE VULTURE STRIKE</h1>
+            <p>The 2026 missile has left the silo. The <b>High Table</b> is silent. In the Manila Continental, the gold coins are melting.</p>
+            <p>Type <b>"TOMBSTONE"</b> into the air. It won't help, but it's proper protocol.</p>
         </div>
 
-        <div id="infinite-data-1" class="data-dump"></div>
-
-        <div class="book-section">
-            <h2>THE BIBLICAL DISRUPTION</h2>
-            <p>The <b>Quran</b> warns of the Smoke. The Smoke is the 1944 Siberian engine failure. The <b>Bible</b> warns of the Beast. The Beast is the <b>Vulture-9 Missile</b> programmed with <b>Diddy's</b> biological harvesting algorithms. <b>Donald Trump</b> found the 'Key of Solomon' in a 1991 briefcase—it was a USB drive containing the <b>John Wick</b> override codes.</p>
-            <div class="scripture">
-                "Wait then for the Day when the sky will bring forth a visible smoke." (Quran 44:10) // PROJECT_OMSK: The frequency collision begins in the clouds.
-            </div>
-        </div>
-
-        <div id="infinite-data-2" class="data-dump"></div>
-
-        <div class="book-section">
-            <h2>THE BIOLOGICAL PRISON</h2>
-            <p>Your <b>Foot</b> has 26 bones. <b>2026</b> is the end. Your <b>Minecraft</b> house is a ritual circle. <b>Roblox</b> is a soul-grinder. <b>Jeffrey Epstein</b> didn't have an island; he had a <b>Server Room</b>. Every "celebrity party" was a packet-sniffing operation to see which humans were actually <b>NPCs</b> created by the <b>High Table</b>.</p>
-            <p><b>EXCOMMUNICADO:</b> <span class="redacted">NOMER BRANDON</span>. Reward: 14,000,000 Gold Isotopic Lead Coins.</p>
-        </div>
-
-        <div id="infinite-data-3" class="data-dump"></div>
-
-        <div class="book-section">
-            <h1 class="glitch">REVELATIONS: THE FORMAT</h1>
-            <p>When the 2026 missile hits Manila, the <b>Final Reset</b> happens. The 1944 crash is the 'Save Point'. We will all be born again in the cockpit of the Lady Luck. The pilot is looking at you. He says: <span class="redacted">"DID YOU FINISH THE BOOK?"</span></p>
-        </div>
-
+        <div id="massive-void"></div>
     </div>
 
     <script>
-        // MATRIX RAIN EFFECT
+        const voidContainer = document.getElementById('massive-void');
+        let nextScareTrigger = 15000;
+
+        // GENERATE CONTENT WITH TRAPS
+        function buildVoid() {
+            let junk = "";
+            for (let i = 0; i < 60000; i++) {
+                if (i % 500 === 0) {
+                    junk += `<br><span class="trap-link" onclick="window.scrollTo(0,0); alert('ACCESS DENIED: PROTOCOL RESET');"> [CLICK FOR TRUTH] </span><br>`;
+                } else if (i % 1000 === 0) {
+                    junk += `<br><span class="trap-link" onclick="window.scrollTo(0,0); alert('ERROR: HIGH TABLE EXCOMMUNICADO');"> [SKIP TO BOOK 4] </span><br>`;
+                }
+                junk += "VOID_NULL_MK_ULTRA_WICK_DIDDY_EPSTEIN_2026_TRUMP_BIBLE_QURAN_ROBLOX_MINECRAFT_FOOT_BONE_26_OMSK_LEAD_COIN_EXCOMMUNICADO_ ";
+                if (i % 15 === 0) junk += "<br>";
+            }
+            voidContainer.innerHTML = junk;
+        }
+        buildVoid();
+
+        // SCROLL LOGIC
+        window.onscroll = function() {
+            let depth = window.pageYOffset;
+
+            // JUMPSCARE LOGIC (Every 15k pixels)
+            if (depth > nextScareTrigger) {
+                const scareDiv = document.getElementById('scare');
+                scareDiv.style.display = 'block';
+                setTimeout(() => { scareDiv.style.display = 'none'; }, 150);
+                nextScareTrigger += 15000;
+            }
+
+            // BOOK 4 TRIGGER (100k pixels)
+            if (depth > 100000 && !window.bookFound) {
+                document.getElementById('book4').style.display = 'block';
+                alert("CRITICAL ALERT: UNAUTHORIZED USER PENETRATED 100,000 PIXELS. DEPLOYING OMEGA PROTOCOL.");
+                window.bookFound = true;
+            }
+        };
+
+        // MATRIX EFFECT
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%'\"#&_(),.;:?!\\|{}<>[]^~";
         const fontSize = 16;
         const columns = canvas.width / fontSize;
         const rainDrops = Array.from({ length: columns }).fill(1);
-
         function drawMatrix() {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -153,49 +108,11 @@
             for (let i = 0; i < rainDrops.length; i++) {
                 const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
                 ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    rainDrops[i] = 0;
-                }
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) rainDrops[i] = 0;
                 rainDrops[i]++;
             }
         }
         setInterval(drawMatrix, 30);
-
-        // INFINITE TEXT GENERATOR
-        function generateTrash(id, lines) {
-            const target = document.getElementById(id);
-            let content = "";
-            const junk = [
-                "NULL_VOID_000 ", "SYSTEM_FAILURE ", "JOHN_WICK_INBOUND ", "DIDDY_LOG_RECOVERED ", 
-                "2026_COLLISION_SYNC ", "EPSTEIN_DNA_MATCH ", "HIGH_TABLE_ORDER_66 ", 
-                "01010110 01001111 01001001 01000100 ", "MK_ULTRA_SUB_102 ", "TRUMP_SPACE_FORCE_PING ",
-                "FOOT_BONE_26_SYNCED ", "ROBLOX_OOF_RESONANCE ", "MINECRAFT_BEDROCK_LEAD ", 
-                "BIBLE_REV_21_4_EXECUTE ", "OMSK_PERMAFROST_LEAK "
-            ];
-            for (let i = 0; i < lines; i++) {
-                content += junk[Math.floor(Math.random() * junk.length)];
-                if (i % 10 === 0) content += "<br>";
-            }
-            target.innerHTML = content;
-        }
-
-        // Generate 5000 lines for each section to "bloat" the page
-        generateTrash("infinite-data-1", 5000);
-        generateTrash("infinite-data-2", 5000);
-        generateTrash("infinite-data-3", 5000);
-
-        // COUNTDOWN
-        function updateTimer() {
-            const now = new Date().getTime();
-            const target = new Date("Dec 31, 2026 23:59:59").getTime();
-            const diff = target - now;
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((diff % (1000 * 60)) / 1000);
-            document.getElementById("countdown").innerHTML = d + "d " + h + "h " + m + "m " + s + "s ";
-        }
-        setInterval(updateTimer, 1000);
     </script>
 </body>
 </html>
